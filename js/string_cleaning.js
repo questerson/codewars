@@ -29,3 +29,11 @@ function stringClean(s){
     
     return cleanStr
   }
+
+
+  function stringClean(s){
+    // Function will return the cleaned string
+    
+     return s.split('').filter((n) => n != parseInt(n)).join('');
+    
+  }
