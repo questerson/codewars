@@ -1,25 +1,27 @@
-// <!-- You probably know that number 42 is "the answer to life, the universe and everything" according to Douglas Adams' "The Hitchhiker's Guide to the Galaxy". For Freud, the answer was quite different...
+// Complete the solution so that it reverses all of the words within the string passed in.
 
-// In the society he lived in, people - women in particular - had to repress their sexual needs and desires. This was simply how the society was at the time. Freud then wanted to study the illnesses created by this, and so he digged to the root of their desires. This led to some of the most important psychoanalytic theories to this day, Freud being the father of psychoanalysis.
+// Example(Input --> Output):
 
-// Now, basically, when a person hears about Freud, s/he hears "sex" because for Freud, everything was related to, and explained by sex.
+// "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+// describe("reverseWords",function(){
+//   it("should work for some examples", function(){
+//     Test.assertEquals(reverseWords("hello world!"), "world! hello")
+//     Test.assertEquals(reverseWords("yoda doesn't speak like this" ),  "this like speak doesn't yoda")
+//     Test.assertEquals(reverseWords("foobar"                       ),  "foobar")
+//     Test.assertEquals(reverseWords("kata editor"                  ),  "editor kata")
+//     Test.assertEquals(reverseWords("row row row your boat"        ),  "boat your row row row")
+//   });
+// });
 
-// In this kata, the function will take a string as its argument, and return a string with every word replaced by the explanation to everything, according to Freud. Note that an empty string, or no arguments, should return an empty string. -->
 
-
-function toFreud(string) {
-let result = []
-  if(string === ""){
-    return ""
+function reverseWords(str){
+  let array = str.split(" ")
+  console.log(array)
+  let final = []
+  for(let i = 0; array.length > i; i++){
+    final.push(array[array.length-1-i])
+      console.log(final)
+    
   }
-  else{
-   let splitter = string.split(" ")
-  
-   splitter.forEach((el, index) => {
-             result.push("sex")           
-  })
-  } 
-  return result.join(" ")
+  return final.join(" ")
 }
-
-const toFreud = str => str === '' ? '' : str.split(' ').map(e => 'sex').join(' ')
