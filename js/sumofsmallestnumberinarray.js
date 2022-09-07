@@ -32,3 +32,15 @@ function sumTwoSmallestNumbers(numbers) {
     return numbers[0]+numbers[1]
   }     
 
+  function sumTwoSmallestNumbers(numbers) {  
+    //Code here
+    
+    let firstNum = Math.min(...numbers)
+    console.log(firstNum)
+    numbers.splice(numbers.indexOf(firstNum),1)
+    let secondNum = Math.min(...numbers)
+    console.log(secondNum)
+    console.log(firstNum+secondNum)
+    return firstNum+secondNum
+    
+  }
