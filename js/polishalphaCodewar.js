@@ -28,4 +28,4 @@ function correctPolishLetters (string) {
     
     console.log(string)
     return string
-  }
+  } 
